@@ -6,7 +6,7 @@ public class EntryInputForm {
 	private String school;//最終学歴
 	private boolean dev;//開発経験有無
 	private String machingPoint; //マッチングポイント
-
+	private String category; //学校の区分
 
 	public String getName() {
 		return name;
@@ -33,10 +33,18 @@ public class EntryInputForm {
 	public void setMachingPoint(String machingPoint) {
 		this.machingPoint = machingPoint;
 	}
-
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
 	@Override
 	public String toString() {
 		return "EntryInputForm [name=" + name + ", school=" + school + ", dev=" + dev + ", machingPoint=" + machingPoint
+				+ ", category=" + category + ", getName()=" + getName() + ", getSchool()=" + getSchool() + ", isDev()="
+				+ isDev() + ", getMachingPoint()=" + getMachingPoint() + ", getCategory()=" + getCategory()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
 				+ "]";
 	}
 

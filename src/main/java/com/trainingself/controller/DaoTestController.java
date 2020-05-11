@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.trainingself.domain.model.Reserve;
+import com.trainingself.domain.model.University;
 import com.trainingself.domain.repository.ReserveDao;
+import com.trainingself.domain.repository.UniversityDao;
 
 @Controller
 public class DaoTestController {
@@ -24,6 +26,9 @@ public class DaoTestController {
 
 	@Autowired
 	ReserveDao reserveDao;
+
+	@Autowired
+	UniversityDao universityDao;
 
 	//----------------------------Daoをテストするためのドライバー----------------------
 
@@ -129,5 +134,17 @@ public class DaoTestController {
 		return "gakusei/queryReserve";
 	}
 
+	//------------------------------------------------------------------------
+
+	@RequestMapping(value = "/dumpUniversity", method = RequestMethod.GET)
+	public String dumpUniversity(Locale locale, Model model) {
+
+		List<University> reslut = universityDao.selectALL();
+
+		model.addAttribute("queryResult", reslut);
+
+
+		return "./gakusei/gakuseiTop";
+	}
 
 }
