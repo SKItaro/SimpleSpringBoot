@@ -12,7 +12,7 @@
 
 
 	  //最終学歴のカテゴリ選択時に動く処理
-	  $('#category').change(function () =>{
+	  $('#category').change(function () {
 
 			param={
 				category:$('#category').val()

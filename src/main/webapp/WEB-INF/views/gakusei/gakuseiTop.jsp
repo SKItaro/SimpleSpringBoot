@@ -24,7 +24,7 @@
 		          contentType: 'application/json', // リクエストの Content-Type
 		          dataType: "json", // レスポンスをJSONとしてパースする
 		          success: function (json_data) { // 200 OK時
-		        	  $('#weathertitle').text(json_data.forecasts[0].image.title)
+		        	  $('#weathertitle').text(json_data.forecasts[0].image.title);
 		        	  $('#weather').attr('src',json_data.forecasts[0].image.url);
 		          }
 			 });
